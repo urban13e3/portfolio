@@ -1,0 +1,220 @@
+/* MOLECULES — small groups of atoms */
+
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social {
+  display: flex;
+  gap: 4px;
+}
+.social a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--ink);
+  transition: background 0.2s, color 0.2s, transform 0.25s var(--ease);
+}
+.social a:hover {
+  background: var(--brown);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.social--dark a {
+  color: var(--cream);
+}
+
+.section-head {
+  margin-bottom: clamp(36px, 6vw, 64px);
+  max-width: 760px;
+}
+.section-head h2 {
+  margin-top: 14px;
+  font-size: clamp(2.4rem, 6.4vw, 4.6rem);
+}
+.section-head--dark h2 {
+  color: var(--cream);
+}
+
+/* experience */
+.xp {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 8px 40px;
+  padding-block: 32px;
+  border-top: 1px solid var(--line);
+}
+.xp:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.xp__period {
+  padding-top: 8px;
+}
+.xp h3 {
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+}
+.xp__role {
+  margin-top: 6px;
+  font-weight: 600;
+}
+.xp__role span {
+  font-weight: 400;
+  color: var(--muted);
+}
+.xp__points {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  max-width: 62ch;
+  color: #3d3d3b;
+}
+.xp__points li {
+  position: relative;
+  padding-left: 20px;
+}
+.xp__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background: var(--brown);
+}
+
+/* project card (dark section) */
+.pcard {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(18px, 3vw, 32px);
+  border: 1px solid rgba(241, 233, 220, 0.14);
+  border-radius: 22px;
+  background: var(--night-2);
+  color: var(--cream);
+  box-shadow: 0 -18px 40px -24px rgba(0, 0, 0, 0.6);
+}
+.pcard h3 {
+  margin-top: 12px;
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+}
+.pcard__summary {
+  margin-top: 14px;
+  color: rgba(241, 233, 220, 0.78);
+  max-width: 46ch;
+}
+.pcard__status {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--brown-soft);
+}
+.status-dot--wip {
+  background: #d9a441;
+  animation: none;
+}
+.pcard .taglist {
+  margin-top: 18px;
+}
+.pcard__actions {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* browser frame around screenshots */
+.frame {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.5s var(--ease);
+}
+.pcard:hover .frame {
+  transform: translateY(-4px) rotate(-0.4deg);
+}
+.frame__bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  background: #ece9e1;
+  border-bottom: 1px solid #ddd9cf;
+}
+.frame__bar i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #c9c4b8;
+}
+.frame img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+.frame--light {
+  border-color: var(--line);
+  box-shadow: 0 24px 50px -30px rgba(40, 25, 15, 0.45);
+}
+.frame--ph {
+  background: #1b1511;
+}
+.frame--ph .frame__bar {
+  background: #2a211a;
+  border-color: #3a2e25;
+}
+.ph {
+  aspect-ratio: 16 / 10;
+  padding: 7% 8%;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+}
+.ph__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ph__row b {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--brown-soft);
+  border-radius: 5px;
+  flex: none;
+}
+.ph__row em {
+  height: 8px;
+  flex: 1;
+  border-radius: 99px;
+  background: rgba(241, 233, 220, 0.14);
+}
+.ph__row:nth-child(2) em { flex: 0 0 62%; }
+.ph__row:nth-child(4) em { flex: 0 0 74%; }
+.ph__row--done b {
+  background: var(--brown-soft);
+}
+.ph__row--done em {
+  opacity: 0.45;
+}
+.ph p {
+  margin-top: 8px;
+}
+
+@media (max-width: 899px) {
+  .xp {
+    grid-template-columns: 1fr;
+  }
+  .pcard {
+    grid-template-columns: 1fr;
+  }
+}

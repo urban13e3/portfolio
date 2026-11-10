@@ -1,0 +1,23 @@
+/* Design tokens — palette starts from #F7F6F2 (paper) with brown + warm-grey accents */
+:root {
+  --paper: #f7f6f2;
+  --paper-2: #efede6;
+  --ink: #242424;
+  --muted: #787772;
+  --line: #deddd6;
+  --brown: #6b4226;
+  --brown-soft: #b5835a;
+  --night: #221a14;
+  --night-2: #2c221b;
+  --cream: #f1e9dc;
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --gutter: clamp(16px, 5vw, 40px);
+  --max: 1120px;
+  --radius: 14px;
+  --header-h: 68px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
