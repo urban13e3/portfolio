@@ -3,7 +3,7 @@
 **Name:** Kolawole Agbolade
 **Matric number:** `23120112006`
 **Course:** CSC 419 — Advances in Web, Mobile and Blockchain Development (2026/2027, First Semester)
-**Project:** Personal Portfolio Website (Individual)
+**Project:** Personal Portfolio Website
 
 **Live site:** `https://portfolio-snowy-zeta-opc81woep6.vercel.app`
 
