@@ -1,11 +1,11 @@
 # Kolawole Agbolade — Personal Portfolio
 
 **Name:** Kolawole Agbolade
-**Matric number:** `ADD-MATRIC-NUMBER-HERE`
+**Matric number:** `23120112006`
 **Course:** CSC 419 — Advances in Web, Mobile and Blockchain Development (2026/2027, First Semester)
 **Project:** Personal Portfolio Website (Individual)
 
-**Live site:** `ADD-VERCEL-URL-HERE`
+**Live site:** `https://portfolio-snowy-zeta-opc81woep6.vercel.app`
 
 ## What's inside
 
